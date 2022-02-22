@@ -9,6 +9,8 @@ FactoryBot.define do
     delivery_day_id           { 2 }
     price                     { '1000' }
 
+    association :user
+
     after(:build) do |item|
       item.image.attach(io: File.open('public/images/panda.jpeg'), filename: 'panda.jpeg')
     end
