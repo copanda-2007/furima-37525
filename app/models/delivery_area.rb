@@ -1,4 +1,4 @@
-class Region < ActiveHash::Base
+class DeliveryArea < ActiveHash::Base
   self.data = [
     { id: 1, name: '---' }, 
     { id: 2, name: '北海道' }, 
@@ -50,8 +50,6 @@ class Region < ActiveHash::Base
     { id: 48, name: '沖縄県' }
   ]
 
-end
-  
   include ActiveHash::Associations
   has_many :items
 
