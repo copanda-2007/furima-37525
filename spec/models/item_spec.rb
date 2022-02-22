@@ -23,27 +23,27 @@ RSpec.describe Item, type: :model do
         expect(@item.errors.full_messages).to include("Description can't be blank")
       end
       it 'category_idに「---」が選択されている場合は出品できない' do
-        @item.category_id = '---'
+        @item.category_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Category can't be blank")
       end
       it 'state_idに「---」が選択されている場合は出品できない' do
-        @item.state_id = '---'
+        @item.state_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("State can't be blank")
       end
       it 'delivery_charge_burden_idに「---」が選択されている場合は出品できない' do
-        @item.delivery_charge_burden_id = '---'
+        @item.delivery_charge_burden_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery charge burden can't be blank")
       end
       it 'delivery_area_idに「---」が選択されている場合は出品できない' do
-        @item.delivery_area_id = '---'
+        @item.delivery_area_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery area can't be blank")
       end
       it 'delivery_day_idに「---」が選択されている場合は出品できない' do
-        @item.delivery_day_id = '---'
+        @item.delivery_day_id = 1
         @item.valid?
         expect(@item.errors.full_messages).to include("Delivery day can't be blank")
       end
