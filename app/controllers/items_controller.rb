@@ -19,9 +19,8 @@ class ItemsController < ApplicationController
     end
   end
 
-  def show     
+  def show
   end
-  
 
   private
 
@@ -31,6 +30,6 @@ class ItemsController < ApplicationController
   end
 
   def set_item
-      @item = Item.find(params[:id])
+    @item = Item.find(params[:id])
   end
 end
