@@ -53,5 +53,4 @@ class ItemsController < ApplicationController
   def user_redirect
     redirect_to action: :index unless @item.user_id == current_user.id
   end
-
 end
