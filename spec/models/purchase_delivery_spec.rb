@@ -39,7 +39,7 @@ RSpec.describe PurchaseDelivery, type: :model do
         @purchase_delivery.valid?
         expect(@purchase_delivery.errors.full_messages).to include('Postcode is invalid. Include hyphen(-)')
       end
-      it '郵便番号がの桁数が間違っていると購入できない' do
+      it '郵便番号の桁数が間違っていると購入できない' do
         @purchase_delivery.postcode = '1234-567'
         @purchase_delivery.valid?
         expect(@purchase_delivery.errors.full_messages).to include('Postcode is invalid. Include hyphen(-)')
